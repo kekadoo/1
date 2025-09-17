@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <malloc.h>
+
+void swap(float *a, float *b) {
+    float tnp;
+    tnp = *a;
+    *a = *b;
+    *b = tnp;
+    return 0;
+}
+
+int main() {
+    float *a;
+    int n;
+    a = (int*)malloc(n*sizeof(float));
+    float **b;
+    b = (int**)malloc(n*sizeof(float*));
+    for (int i = 0; i < n; i++) {
+        scanf("%f", a+i);
+        *(b+i) = a+i;
+    }
+    for (int i = 0; i < n-1;i++)
+        for(int j = 0; j < n-i-1; i++)
+            if (**(b+j) > **(b+j+1))
+                swap(b+j,b+j+1);
+    for(int i=0; i<n; i++)
+        printf("%6.2f", **(b+i));
+    printf("\n");
+    for (int i = 0; i < n; i++)
+        printf("%6.2f", *(a+i));
+    free(a);
+    free(b);
+    return 0;
+}
