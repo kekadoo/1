@@ -1,0 +1,57 @@
+// // Задача 1
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n;
+//     int* s_1 = malloc(10 * sizeof(int));
+//     int* s_2 = malloc(8 * sizeof(int));
+//     for (int i = 1; i < 11; i++) {
+//         scanf("%d*", &n);
+//         s_1[i] = n;
+//     }
+//     for (int i = 1; i < 9; i++)
+//         s_2[i] = s_1[i] + s_1[i+1];
+//     for (int i = 1; i < 9; i++)
+//         printf("%d ", s_2[i]);
+//     return 0;    
+        
+        
+// }
+
+
+// 1+2 2+3 3+4 4+5 5+6 6+7 7+8 8+9 9+10
+
+
+// Задача 2
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    int* s_1 = malloc(10 * sizeof(int));
+    int* s_2 = malloc(9 * sizeof(int));
+    for (int i = 1; i < 11; i++) {
+        scanf("%d*", &n);
+        s_1[i] = n;
+    }
+    int k=0;
+    for (int i = 1; i < 11; i++)
+        if (s_1[i] == 3) {
+            int pz = i;
+            k++;
+        }
+    if (k == 1) {
+        s_2 = s_1;
+        for (int pz; pz < 10; pz++)
+            s_2[pz] = s_2[pz+1];
+    }
+    s_2--;
+    for (int i = 1; i < 10; i++)
+        printf("%d", s_2[i]);
+    if (k != 1) 
+        printf("Ошибка. В списке число 3 не встречается единожды.");
+    return 0;
+}
