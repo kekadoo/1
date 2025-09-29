@@ -1,0 +1,248 @@
+// // Задача 1
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n;
+//     int size;
+//     int *s_1 = (int*)malloc(size * sizeof(int));
+//     int *s_2 = (int*)malloc(size * sizeof(int));
+//     for (int i = 1; i < 11; i++) {
+//         scanf("%d*", &n);
+//         s_1[i] = n;
+//     }
+//     for (int i = 1; i < 9; i++)
+//         s_2[i] = s_1[i] + s_1[i+1];
+//     for (int i = 1; i < 9; i++)
+//         printf("%d ", s_2[i]);
+//     return 0;    
+        
+        
+// }
+
+
+// 1+2 2+3 3+4 4+5 5+6 6+7 7+8 8+9 9+10
+
+
+// // Задача 2
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int pz;
+//     int n;
+//     int size;
+//     int *s_1 = (int*)malloc(size * sizeof(int));
+//     int *s_2 = (int*)malloc(size * sizeof(int));
+//     for (int i = 1; i < 5; i++) {
+//         scanf("%d*", &n);
+//         s_1[i] = n;
+//     }
+//     int k=0;
+//     for (int i = 1; i < 5; i++)
+//         if (s_1[i] == 3) {
+//             pz = i;
+//             k++;
+//         }
+//     if (k == 1) {
+//         s_2 = s_1;
+//         for (pz; pz > 0 && pz < 4; pz++)
+//             s_2[pz] = s_2[pz+1];
+//     }
+//     (*s_2)--;
+//     for (int i = 1; i < 4; i++)
+//         printf("%d ", s_2[i]);
+//     if (k != 1) 
+//         printf("Ошибка. В списке число 3 не встречается единожды.");
+//     return 0;
+// }
+
+
+// // Задача 5
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n;
+//     float x = 0;
+//     float k = 0;
+//     int size;
+//     int *s = (int*)malloc(size * sizeof(int));
+//     for (int i = 1; i < 5; i++) {
+//         scanf("%d", &n);
+//         x = x + n;
+//         k++;
+//         s[i] = n;
+//     }
+//     for (int i = 1; i < 5; i++)
+//         printf("%d ", s[i]);
+//     float r = x/k;
+//     printf("%f", r);
+//     return 0;
+// }
+
+
+// // Задача 6
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int size;
+//     int n;
+//     int *s = (int*)malloc(size * sizeof(int));
+//     scanf("%d", &n);
+//     for (int i = 1; i <= n; i++)
+//         if (n % i == 0) {
+//             s[i] = i;
+//             printf("%d ", s[i]);
+//         }
+//     return 0;
+// }
+
+
+
+
+// //  Задача 7
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int n;
+//     int ch = 0;
+//     int nch = 0;
+//     int size;
+//     int *s = (int*)malloc(size * sizeof(int));
+//     for (int i = 1; i < 5; i++) {
+//         scanf("%d*", &n);
+//         if (n % 2 == 0)
+//             ch = ch + n;
+//         if (n % 2 != 0)
+//             nch = nch + n;
+//     }
+//     printf("%d %d", ch, nch);
+//     free(s);
+//     return 0;
+// }
+
+
+// // Задача 10 не доделано
+
+
+
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//     int dpz1;
+//     int dpz2;
+//     int pz;
+//     int n;
+//     int size;
+//     int *s_1 = (int*)malloc(size * sizeof(int));
+//     int *s_2 = (int*)malloc(size * sizeof(int));
+//     for (int i = 1; i < 5; i++) {
+//         scanf("%d*", &n);
+//         s_1[i] = n;
+//     }
+//     scanf("%d %d", &dpz1 ,&dpz2)
+//     int k=0;
+//     for (int i = dpz2; i > dpz1 i < dpz2; i--)
+//         s_1[i] = s_1[i-1]
+//         s_1[i-1] = s_1[i-2]
+        
+//         }
+//     if (k == 1) {
+//         s_2 = s_1;
+//         for (pz; pz > 0 && pz < 4; pz++)
+//             s_2[pz] = s_2[pz+1];
+//     }
+//     (*s_2)--;
+//     for (int i = 1; i < 4; i++)
+//         printf("%d", s_2[i]);
+//     if (k != 1) 
+//         printf("Ошибка. В списке число 3 не встречается единожды.");
+//     return 0;
+// }
+
+
+// // Задача 12 не доделана
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+
+// void two() {
+    
+    
+    
+// }
+
+// int main() {
+//     int k = 0;
+//     int c = 0;
+//     int n = 0;
+//     char* s = malloc(100 * sizeof(char));
+//     char* a = malloc(100 * sizeof(char));
+//     scanf("%[^\n]", s);
+//     char o[] = {'p', 'q', 'a', 'b', 'd', 'e', 'g', 'o'};
+//     for (int i = 0; i < strlen(s); i++)
+//         for (int j = 0; j < strlen(o); j++)
+//             if (s[i] == o[j])
+//                 k++;
+//     for (int i = 0; i < strlen(s); i++)
+//         if (s[i] != ' ')
+//             c++;
+//     for (int i = 0; i < strlen(s); i++)
+//         for (int j = 0; j < strlen(o); j++)
+//             if (s[i] == o[j])
+//                 k++;
+//                 if (s[i] == ' ') {
+//                     n = k - n;
+//                     if (n >= 2)
+//                         for (int i = 0; i < ; i++)
+//                             printf(s[i]);
+                    
+                
+                
+            
+//     printf("%d %d", k, c-k);
+//     return 0;
+// }
+
+
+// // Задача 3
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+
+// int main() {
+//     int size_1;
+//     int size_2;
+//     char *sl = (char*)malloc(size_1 * sizeof(char));
+//     char *s = (char*)malloc(size_2 * sizeof(char));
+//     scanf("%[^\n]", s);
+//     // printf("%s", s);
+//     for (int i = 0; i < strlen(s); i++) {
+//         int j = strlen(sl);
+//         sl[j] = s[i];
+//         sl[j+1] = '\0';
+//         if (sl[j] == ' ' || sl[j] == ',' || sl[j] == '.') {
+//             for (int j = 0; j < strlen(sl)-1; j++)
+//                 printf("%c", sl[j]);
+//             sl[0] = '\0';
+//         }
+//     }
+    
+
+    
+//     free(sl);
+//     free(s);
+//     return 0;
+// }
+
