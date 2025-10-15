@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    int size;
+    int i = 0;
+    int r = 0;
+    char *s = (char*)malloc(size * sizeof(char));
+    char *p = (char*)malloc(size * sizeof(char));
+    char **l = malloc(size * sizeof(char)); // вопрос
+    
+    fgets(p, 100, stdin);
+    
+    while (*(p+i) != '\0')
+        i++;
+    
+    int w = 0;
+    
+    for (int j = 0; j < i; j++) {
+        *(s+j) = *(p+j);
+        
+        if (*(s+j) == ' ' || *(s+j) == '\n' || *(s+j) == ',' || *(s+j) == '.' ||
+        *(s+j) == '!' || *(s+j) == '?') {
+            *(s+j) = '\0';
+            l[r] = malloc(size); // вопрос
+            strcpy(l[r], s + w); // вопрос
+            r++;
+            w = j + 1; // вопрос
+        }
+    }
+    for (i = 0; i < r; i++)
+        printf("%s ", l[i]);
+    return 0;
+}
+
+
+
+
+
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    int size;
+    int i = 0;
+    int r = 0;
+    int c = 0;
+    char *s = (char*)malloc(size * sizeof(char));
+    char *p = (char*)malloc(size * sizeof(char));
+    char **l = malloc(size * sizeof(char)); // вопрос
+    char **k = malloc(size * sizeof(char)); // вопрос
+    
+    fgets(p, 100, stdin);
+    
+    while (*(p+i) != '\0')
+        i++;
+    
+    int w = 0;
+    
+    for (int j = 0; j < i; j++) {
+        *(s+j) = *(p+j);
+        
+        if (*(s+j) == ' ' || *(s+j) == '\n' || *(s+j) == ',' || *(s+j) == '.' ||
+        *(s+j) == '!' || *(s+j) == '?') {
+            *(s+j) = '\0';
+            l[r] = malloc(size); // вопрос
+            strcpy(l[r], s + w); // вопрос
+            r++;
+            w = j + 1; // вопрос
+        }
+    }
+    for (int i = 0; i < r; i++)
+        for (int j = 0; j < r; j++)
+            if (i != j)
+                if (strcmp(l[i], l[j]) != 0) {
+                        printf("0 ");
+                        k[c] = malloc(size);
+                        printf("0 ");
+                        k[c] = l[i];
+                        printf("0 ");
+                        c++;
+                        break;
+                }
+                else
+                    break;
+    for (i = 0; i < c; i++)
+        printf("%s ", k[i]);
+    return 0;
+}
